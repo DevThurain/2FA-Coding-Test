@@ -1,10 +1,8 @@
-# 🔐 2FA Coding Test Mobile App
+# 2FA Coding Test Mobile App
 
 A simple mobile application for demonstrating a basic two-factor authentication (2FA) flow.
 
----
-
-## 📱 Screens
+## Screens
 
 ### 1. Create User Screen
 - Allows users to create a new account by providing user id, email and password.
@@ -18,4 +16,3 @@ A simple mobile application for demonstrating a basic two-factor authentication 
 - Prompts users to enter the verification code received via email.
 - Completes the authentication upon successful verification.
 
----
