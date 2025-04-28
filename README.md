@@ -1,17 +1,21 @@
-# two_fa
+# 🔐 2FA Coding Test Mobile App
 
-A new Flutter project.
+A simple mobile application for demonstrating a basic two-factor authentication (2FA) flow.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📱 Screens
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Create User Screen
+- Allows users to create a new account by providing user id, email and password.
+- Creates and stores the user in supabase database and sent verification email.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 2. Sign In Screen
+- Users sign in with their email and password.
+- Initiates the 2FA process by sending a verification code.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# 2FA-Coding-Test
+### 3. Verification Screen
+- Prompts users to enter the verification code received via email.
+- Completes the authentication upon successful verification.
+
+---
