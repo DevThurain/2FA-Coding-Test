@@ -16,6 +16,7 @@ class SimpleTextField extends HookConsumerWidget {
     this.obscureText = false,
     this.enabled = true,
     this.maxLength,
+    this.validator,
   });
   final String title;
   final TextEditingController textController;
@@ -24,6 +25,7 @@ class SimpleTextField extends HookConsumerWidget {
   final bool obscureText;
   final bool enabled;
   final int? maxLength;
+  final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -38,7 +40,7 @@ class SimpleTextField extends HookConsumerWidget {
           child: Text(title, style: TextStyles.inter16().copyWith(fontWeight: FontWeight.bold)),
         ),
         SizedBox(height: AppValues.p_12),
-        TextField(
+        TextFormField(
           controller: textController,
           maxLines: maxLines,
           maxLength: maxLength,
@@ -46,6 +48,7 @@ class SimpleTextField extends HookConsumerWidget {
           textInputAction: textInputAction,
           obscureText: obscureText ? visibleText.value : false,
           enabled: enabled,
+          validator: validator,
           decoration: InputDecoration(
             filled: true,
             fillColor: AppColors.greyBase.withAlpha(40),
